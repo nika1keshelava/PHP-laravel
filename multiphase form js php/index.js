@@ -1,18 +1,18 @@
 let fname, lname, gender, country;
 
-function _ (x){
+function node (x){
     return document.getElementById(x);
 }
 
 
 function processPhase1(){
-    fname = _("firstname").value;
-    lname = _("lastname").value;
+    fname = node("firstname").value;
+    lname = node("lastname").value;
     if (fname.length > 2 && lname.length >2){
-        _("phase1").style.display = "none";
-        _("phase2").style.display = "block";
-        _("progressbar").value = 33;
-        _("status").innerHTML = "phase 2 of 3"
+        node("phase1").style.display = "none";
+        node("phase2").style.display = "block";
+        node("progressbar").value = 33;
+        node("status").innerHTML = "phase 2 of 3"
     }else{
         alert("please fill in the fields");
     }
@@ -20,36 +20,36 @@ function processPhase1(){
 
 
 function processPhase2(){
-    gender = _("gender").value;
+    gender = node("gender").value;
     if(gender.length > 0){
-        _("phase2").style.display = "none";
-        _("phase3").style.display = "block";
-        _("progressbar").value = 66;
-        _("status").innerHTML = "phase 3 of 3"
+        node("phase2").style.display = "none";
+        node("phase3").style.display = "block";
+        node("progressbar").value = 66;
+        node("status").innerHTML = "phase 3 of 3"
     }else{
         alert("please choose your gender");
     }
 }
 
 function processPhase3(){
-    country = _("country").value;
+    country = node("country").value;
     if(country.length>0){
-        _("phase3").style.display = "none";
-        _("show_all_data").style.display = "block";
-        _("display_fname").innerHTML = fname;
-        _("display_lname").innerHTML = lname;
-        _("display_gender").innerHTML = gender;
-        _("display_country").innerHTML = country;
-        _("progressbar").value = 100;
-        _("status").innerHTML = "phase 3 of 3"
+        node("phase3").style.display = "none";
+        node("show_all_data").style.display = "block";
+        node("display_fname").innerHTML = fname;
+        node("display_lname").innerHTML = lname;
+        node("display_gender").innerHTML = gender;
+        node("display_country").innerHTML = country;
+        node("progressbar").value = 100;
+        node("status").innerHTML = "phase 3 of 3"
     }else{
         alert("please choose your country");
     }
 }
 
 function  submitForm(){
-    _("multiphase").method = "post";
-    _("multiphase").action = "my_parser.php";
-    _("multiphase").submit();
+    node("multiphase").method = "post";
+    node("multiphase").action = "my_parser.php";
+    node("multiphase").submit();
 }
 

@@ -1,3 +1,3 @@
 form#multiphase{border: palevioletred 5px solid; padding: 24px; width: 350px;}
-
+body {background-color: black; color: wheat}
 form#multiphase > #phase2, #phase3, #show_all_data{display: none;}
