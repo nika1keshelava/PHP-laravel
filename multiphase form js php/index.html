@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <script src="index.js" ></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<progress id="progressbar" value="0" max="100" style="width: 250px"></progress>
+<h3 id="status">phase 1 of 3</h3>
+
+    <form id="multiphase" onsubmit=" return false">
+        <div id = "phase1">
+            first name: <input id="firstname" name="firstname"> <br>
+            last name: <input id = "lastname" name = "lastname"> <br>
+            <button onclick="processPhase1()"> Continue </button>
+
+        </div>
+
+
+        <div id = "phase2">
+            gender: <select id="gender" name="gender" >
+                        <option value=""></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select><br>
+            <button onclick="processPhase2()"> Continue </button>
+
+        </div>
+
+
+        <div id = "phase3">
+            country: <select id = "country" name = "country>">
+                             <option value= "United states">United states</option>
+                             <option value= "Georgia">Georgia</option>
+                             <option value= "Russia">Russia</option>
+                     </select><br>
+            <button onclick="processPhase3()">Continue</button>
+        </div>
+
+
+        <div id = "show_all_data">
+            First Name: <span id="display_fname"></span><br>
+            Last Name: <span id="display_lname"></span><br>
+            Gender: <span id="display_gender"></span><br>
+            Country: <span id ="display_country"></span><br>
+            <button onclick="submitForm()">Submit Data</button>
+        </div>
+    </form>
+</body>
+</html>
