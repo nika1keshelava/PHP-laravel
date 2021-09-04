@@ -38,4 +38,5 @@ for ($i = 0; $i<count($arr); $i++){
     echo $arr[$i];
     echo "<br>";
 
+    echo "frameworkebis garda ar iswavlot araferi xo";
 }
